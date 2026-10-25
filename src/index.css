@@ -20,9 +20,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   isolation: isolate;
   display: grid;
   min-height: 100svh;
-  overflow-x: hidden;
+  overflow: hidden;
   place-items: center;
-  padding: 24px;
+  padding: 48px 24px 28px;
   background: radial-gradient(ellipse at 50% 45%, rgba(255,255,255,.04), transparent 46%), linear-gradient(145deg, #111214, #090a0c 54%, #101113);
 }
 .ambient-light { position: absolute; z-index: -1; width: min(44vw, 560px); aspect-ratio: 1; border-radius: 50%; filter: blur(110px); pointer-events: none; will-change: transform; }
@@ -34,7 +34,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .profile-card {
   display: grid;
   grid-template-columns: minmax(0, 1.03fr) minmax(0, .97fr);
-  min-height: min(590px, calc(100svh - 48px));
+  min-height: 590px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 28px;
@@ -42,7 +42,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   box-shadow: 0 32px 100px rgba(0,0,0,.48), 0 1px 0 rgba(255,255,255,.06) inset;
   backdrop-filter: blur(24px);
 }
-.portrait-panel { position: relative; min-height: min(590px, calc(100svh - 48px)); overflow: hidden; background: #242527; }
+.portrait-panel { position: relative; min-height: 590px; overflow: hidden; background: #242527; }
 .portrait-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 38%; transform: scale(1.015); }
 .portrait-vignette { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,8,9,.58), transparent 24%, transparent 58%, rgba(7,8,9,.82)), linear-gradient(90deg, rgba(7,8,9,.08), transparent 44%, rgba(7,8,9,.12)); }
 .eyebrow, .details-footer { font-size: 12px; font-weight: 700; letter-spacing: .12em; }
@@ -82,46 +82,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @keyframes drift-two { from { transform: translate3d(18px,12px,0) scale(1); } to { transform: translate3d(-28px,-22px,0) scale(1.12); } }
 
 @media (max-width: 700px) {
-  .site-shell { padding: 12px 16px; }
+  .site-shell { padding: 24px 16px; }
   .page-content { max-width: 460px; }
   .profile-card { grid-template-columns: 1fr; min-height: 0; border-radius: 24px; }
-  .portrait-panel { min-height: 0; aspect-ratio: 1.8 / 1; }
+  .portrait-panel { min-height: 0; aspect-ratio: 1.22 / 1; }
   .portrait-image { object-position: center 35%; }
-  .profile-details { min-height: 0; padding: 14px 23px 12px; }
-  .identity { margin: 12px 0; padding-top: 0; }
-  .identity h1 { font-size: clamp(34px, 8vw, 42px); }
-  .organization { margin-top: 8px; font-size: 15px; line-height: 1.35; }
-  .contact-link { min-height: 58px; }
-  .save-contact { min-height: 46px; margin-top: 12px; }
-  .details-footer { padding-top: 12px; }
-  .footer-logo { width: 160px; }
-}
-
-@media (max-height: 740px) and (max-width: 700px) {
-  .site-shell { padding-block: 8px; }
-  .portrait-panel { aspect-ratio: 2.2 / 1; }
-  .profile-details { padding-block: 10px 8px; }
-  .identity { margin: 8px 0; }
-  .contact-link { min-height: 52px; }
-  .save-contact { min-height: 44px; margin-top: 8px; }
-  .details-footer { padding-top: 8px; }
-}
-
-@media (max-height: 620px) and (max-width: 700px) {
-  .site-shell { padding-block: 6px; }
-  .portrait-panel { aspect-ratio: 2.8 / 1; }
-  .profile-details { padding: 8px 18px 6px; }
-  .identity { margin: 6px 0; }
-  .eyebrow { margin-bottom: 6px; font-size: 12px; }
-  .identity h1 { font-size: clamp(30px, 8vw, 38px); }
-  .organization { margin-top: 5px; font-size: 14px; }
-  .contact-link { min-height: 48px; }
-  .contact-icon { width: 34px; height: 34px; flex-basis: 34px; }
-  .contact-label { font-size: 12px; }
-  .contact-detail { font-size: 14px; }
-  .save-contact { min-height: 42px; margin-top: 6px; }
-  .details-footer { padding-top: 6px; }
+  .profile-details { min-height: 500px; padding: 24px 23px 20px; }
+  .identity { margin: 39px 0 25px; padding-top: 0; }
+  .identity h1 { font-size: clamp(36px, 9vw, 44px); }
+  .organization { font-size: 15px; }
   .footer-logo { width: 144px; }
+  .page-footer { margin-top: 16px; font-size: 7px; }
 }
 
 @media (max-width: 380px) {
