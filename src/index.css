@@ -46,7 +46,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .portrait-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 38%; transform: scale(1.015); }
 .portrait-vignette { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,8,9,.58), transparent 24%, transparent 58%, rgba(7,8,9,.82)), linear-gradient(90deg, rgba(7,8,9,.08), transparent 44%, rgba(7,8,9,.12)); }
 .eyebrow, .details-footer { font-size: 12px; font-weight: 700; letter-spacing: .12em; }
-.details-footer { justify-content: center; }
 .footer-logo { display: block; width: 160px; max-width: 100%; height: auto; object-fit: contain; }
 
 .caption-location span { padding: 0 5px; color: #ed2631; }
@@ -71,7 +70,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .save-contact:hover { background: #f02c37; box-shadow: 0 8px 28px rgba(224,32,43,.22); }
 .save-contact svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; }
 .save-format { margin-left: auto; padding-right: 13px; color: rgba(255,255,255,.65); font-size: 8px; letter-spacing: .13em; }
-.details-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 24px; color: #74767a; font-size: 7px; letter-spacing: .12em; }
+.details-footer { display: flex; align-items: center; justify-content: center; margin-top: auto; padding-top: 24px; color: #74767a; font-size: 7px; letter-spacing: .12em; }
 .footer-mark { color: #e9e9e8; font-size: 15px; font-weight: 800; letter-spacing: -.08em; }
 .footer-mark span { color: #ed2631; }
 .page-footer { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; color: #777b80; font-size: 9px; font-weight: 600; letter-spacing: .16em; text-align: center; }
